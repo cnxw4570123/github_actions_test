@@ -15,5 +15,14 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "🍏 This job's status is ${{ job.status }}."      
+      - name: 시크릿 읽어오기
+      - run: |
+          mkdir test/
+          cd test/
+          touch ./secret.yml
+
+          echo "${{ secrets.TEST }}" >> ./secret.yml
+
+          cat ./secret.yml
 
