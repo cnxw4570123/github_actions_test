@@ -17,8 +17,8 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."      
       - name: 시크릿 읽어오기
-      - shell : bash
-      - run: |
+        shell : bash
+        run: |
           mkdir test/
           cd test/
           touch ./secret.yml
