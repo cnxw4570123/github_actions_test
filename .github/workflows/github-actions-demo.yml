@@ -31,7 +31,6 @@ jobs:
       - name: application-dev.yml 생성
         shell: bash
         run: |
-          ls -al
           mkdir test/
           cd test/
           touch ./secret.yml
@@ -40,5 +39,6 @@ jobs:
           
       - name: Grant execute permission for gradlew
         run: |
+          ls -al
           chmod +x github_actions_test/test.txt
           cat github_actions_test/text.txt
